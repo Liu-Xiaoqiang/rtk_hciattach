@@ -1,0 +1,14 @@
+#!/bin/bash -e
+
+# Host->BT
+#gpioset -c gpiochip8 4=1 &
+# BT->Host
+#gpioset -c gpiochip8 3=1 &
+# WL->Host
+#gpioset -c gpiochip8 6=1 &
+
+btwake
+btreset
+# Bluetooth
+modprobe hci_uart
+rtk_hciattach -n -s 115200 ttySTM5 rtk_h5 &

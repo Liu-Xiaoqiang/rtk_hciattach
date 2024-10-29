@@ -1,0 +1,6 @@
+/oe-logs
+/oe-workdir
+*.o
+rtk_hciattach
+btreset
+btwake
