@@ -11,4 +11,4 @@ btwake
 btreset
 # Bluetooth
 modprobe hci_uart
-rtk_hciattach -n -s 115200 ttySTM5 rtk_h5 &
+rtk_hciattach -n -s 115200 ttySTM6 rtk_h5 &
