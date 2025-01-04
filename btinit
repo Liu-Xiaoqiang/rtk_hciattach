@@ -12,3 +12,6 @@ btreset
 # Bluetooth
 modprobe hci_uart
 rtk_hciattach -n -s 115200 ttySTM6 rtk_h5 &
+
+# Close WiFi log
+echo 0 > /proc/net/rtl8821cs/log_level
