@@ -1,4 +1,4 @@
-all: rtk_hciattach btreset btwake
+all: rtk_hciattach btreset btwake ltereset
 OBJS := hciattach.o hciattach_rtk.o hciattach_h4.o rtb_fwc.o
 
 rtk_hciattach: $(OBJS)
@@ -14,8 +14,11 @@ btreset:
 btwake:
 	$(CC) -o btwake btwake.c
 
+ltereset:
+	$(CC) -o ltereset ltereset.c
+
 clean:
-	rm -f $(OBJS) rtk_hciattach btreset btwake
+	rm -f $(OBJS) rtk_hciattach btreset btwake ltereset
 
 tags: FORCE
 	ctags -R
